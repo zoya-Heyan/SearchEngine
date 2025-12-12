@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>新增文章</title>
+</head>
+<body>
+
+<h1>新增文章</h1>
+
+<form action="/add" method="post">
+    <p>标题: <input type="text" name="title" style="width:300px;"></p>
+    <p>内容:</p>
+    <textarea name="content" style="width:500px; height:200px;"></textarea>
+    <br><br>
+    <button type="submit">提交</button>
+</form>
+
+<a href="/">返回</a>
+
+</body>
+</html>

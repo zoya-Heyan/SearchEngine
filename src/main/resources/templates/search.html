@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索引擎</title>
+    <style>
+        body {
+            margin: 0;
+            height: 65vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 40px;
+        }
+
+        .search-box {
+            width: 500px;
+            display: flex;
+        }
+
+        input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #4285f4;
+            border-right: none;
+            border-radius: 25px 0 0 25px;
+            font-size: 18px;
+            outline: none;
+        }
+
+        button {
+            width: 100px;
+            border: none;
+            background-color: #4285f4;
+            color: white;
+            font-size: 18px;
+            border-radius: 0 25px 25px 0;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2a6adf;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My Search</h1>
+
+<form action="/search" method="get" class="search-box">
+    <input type="text" name="keyword" placeholder="输入关键词">
+    <button type="submit">搜索</button>
+</form>
+
+</body>
+</html>

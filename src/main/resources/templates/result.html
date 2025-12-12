@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索结果</title>
+</head>
+<body>
+<h1>搜索结果: "<span th:text="${keyword}"></span>"</h1>
+
+<div>
+    <h3>最近搜索：</h3>
+    <div th:each="h : ${history}">
+        <a th:text="${h}" th:href="'/search?keyword=' + ${h}"></a>
+    </div>
+</div>
+<br>
+
+<div th:if="${#lists.isEmpty(results)}">
+    <p>没有找到相关内容。</p>
+</div>
+
+<div th:each="doc : ${results}">
+    <h3 th:text="${doc.title}"></h3>
+    <p th:utext="${#strings.replace(doc.content, keyword, '<mark>' + keyword + '</mark>')}"></p>
+    <hr>
+</div>
+
+<a href="/">返回搜索</a>
+</body>
+</html>
