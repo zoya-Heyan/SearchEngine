@@ -1,4 +1,4 @@
- MySearchEngine
+# MySearchEngine
 
 A simple search engine built with Java, Spring Boot, and MySQL, implementing the core ideas of information retrieval including tokenization, inverted index, and keyword-based search with a web interface.
 
